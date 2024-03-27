@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 
 
-:root{
-    --primary-color: #28a745;
-    --bg-primary: #28a745;
-    --txt-primary-color: #28a745;
-}
+
 /* html{
     font-size: 10px;
 } */
@@ -38,7 +34,7 @@ p{
 }
 
 img{
-    width: 100px;
+    width: 100%;
 }
 
 
@@ -63,6 +59,7 @@ img{
 }
 
 nav ul{
+    flex-direction: row;
     display: flex;
 }
 nav ul a{
@@ -86,7 +83,10 @@ nav ul a:hover{
     color: #fff;
     position: relative;
 }
-
+.hero.blog{
+    background: url(../images/home/blog.jpg)no-repeat center center/cover;
+    height: 50vh;
+}
 .hero .content{
     display: flex;
     flex-direction: column;
@@ -121,4 +121,186 @@ nav ul a:hover{
 
 .hero *{
     z-index: 10;
+}
+
+/* Icons Section */
+
+.icons h3{
+    font-weight: bold;
+    margin: 1rem 0;
+}
+.icons i{
+    padding: 10px;
+    border-radius: 50%;
+}
+
+/* Tema */
+.team img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    padding: 0 10px;
+}
+
+
+/* Contact */
+
+.control-form{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.control-form label{
+    width: 100%;
+    margin: 10px 0;
+}
+.control-form label input{
+    width: 100%;
+    display: block;
+    padding: 10px;
+    border: none;
+
+}
+.control-form label input:focus{
+    outline: none;
+}
+
+/* Post */
+.post{
+    margin: 10px;
+    padding: 15px;
+}
+
+.post h1{
+    font-weight: 300;
+    font-size: 40px;
+    display: block;
+    border-bottom: solid 1px #3333333d;
+    margin: 20px 0;
+}
+
+.post .flex-items{
+    flex-direction: column;
+    text-align: start;
+}
+
+
+.post img{
+    max-width: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+ 
+}
+
+.footer .social a{
+    padding: 10px;
+    color: #fff;   
+}
+.footer p{
+    margin-top: 10px;
+}
+.nav-bar .menues{
+    display: none;
+}
+
+
+
+@media (max-width: 1000px) {
+
+  
+    .nav-bar{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 100px;
+    position: relative;
+    padding: 20px;
+    }
+
+    .nav-bar .menues{
+        position: absolute;
+        top: 2;
+        right: 30px;
+        cursor: pointer;
+        display: block;
+    }
+/* 
+    .nav-bar .menues .fa-x{
+        display: none;
+    }
+ */
+    .nav-bar.active{
+        height: 350px;
+    }
+    .nav-bar.active .menues{
+        position: absolute;
+        top: 2;
+        right: 30px;
+        cursor: pointer;
+        display: block;
+    }
+    .nav-bar .menues .fa-x,
+    .nav-bar.active .menues .fa-bars,
+    .nav-bar ul {
+        display: none;
+    }
+    .nav-bar.active .menues .fa-x,
+    .nav-bar .menues .fa-bars,
+    .nav-bar.active ul {
+        display: block;
+    }
+    .nav-bar.active nav{
+        width: 100%;
+    }
+   
+    .nav-bar.active ul a{
+        display: block;
+        border-bottom: 1px solid #fff;
+    }
+    .nav-bar.active 
+
+
+    .hero .content h1{
+        font-size: 45px;
+    }
+
+    .hero .content p{
+        font-size: 20px;
+    }
+
+    .flex-items{
+        flex-direction: column;
+    }
+
+    .flex-columns .row{
+        flex-direction: column;
+    }
+    .flex-columns.flex-reverse .row{
+        flex-direction: column;
+    }
+    .flex-grid .row{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .flex-grid .column{
+        flex: 100%;
+        max-width: 100%;
+        padding: 0 4px;
+    }
+    
 }
